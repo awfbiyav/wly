@@ -1,0 +1,8 @@
+{
+  "version":"fw-protocol-v1",
+  "calibration_seeds":[401,402,403,404],
+  "evaluation_seeds":[501,502,503,504,505,506,507,508],
+  "scenario_count":5,
+  "decision":"FW4 obstacle moved out of the dynamics-only corridor after calibration revealed obstacle-clearance confounding; evaluation seeds are disjoint and locked after this decision.",
+  "note":"This calibration is secondary to the frozen main protocol and does not modify any main data."
+}

@@ -1,0 +1,113 @@
+{
+  "version": "1.0",
+  "provenance": {
+    "main_sha256": "9155a0d85c7659d41da7ab70c44ca840a65965d7e0286918f146e0e87cc70748",
+    "expected": "9155a0d85c7659d41da7ab70c44ca840a65965d7e0286918f146e0e87cc70748",
+    "main_unchanged": true,
+    "main_rows": 900
+  },
+  "main": {
+    "summary": [
+      {
+        "method": "sindy",
+        "success": 0.99,
+        "n": 300,
+        "ci_low": 0.9710165066376601,
+        "ci_high": 0.9965933815622847,
+        "terminal_error_mean": 0.28052243766363544,
+        "min_dist_mean": 0.6299372979591802
+      },
+      {
+        "method": "standard",
+        "success": 0.8566666666666667,
+        "n": 300,
+        "ci_low": 0.8124994228503402,
+        "ci_high": 0.8918152576761502,
+        "terminal_error_mean": 0.27881620948998126,
+        "min_dist_mean": 0.5825983672104388
+      },
+      {
+        "method": "rls",
+        "success": 0.8566666666666667,
+        "n": 300,
+        "ci_low": 0.8124994228503402,
+        "ci_high": 0.8918152576761502,
+        "terminal_error_mean": 0.27960582541610424,
+        "min_dist_mean": 0.5828630350125111
+      }
+    ]
+  },
+  "prediction": {
+    "n": 300,
+    "sindy_rmse": 0.09949935953433725,
+    "nominal_rmse": 0.43222786480863884,
+    "rls_rmse": 0.26716386586734897,
+    "gain_vs_nominal_pct": 76.97988315066434,
+    "gain_vs_rls_pct": 62.75717930218144
+  },
+  "four_wheel": {
+    "summary": [
+      {
+        "method": "rls",
+        "success": 0.8,
+        "n": 40,
+        "ci_low": 0.652426936536005,
+        "ci_high": 0.895000102745623,
+        "terminal_error_mean": 0.36925835571683663,
+        "min_dist_mean": 1.0405172372661358,
+        "energy_mean": 11.063215737302219
+      },
+      {
+        "method": "sindy",
+        "success": 0.95,
+        "n": 40,
+        "ci_low": 0.8349612263085903,
+        "ci_high": 0.9861793326138516,
+        "terminal_error_mean": 0.22772625038974495,
+        "min_dist_mean": 1.0513118372460564,
+        "energy_mean": 11.12155334536321
+      },
+      {
+        "method": "standard",
+        "success": 0.8,
+        "n": 40,
+        "ci_low": 0.652426936536005,
+        "ci_high": 0.895000102745623,
+        "terminal_error_mean": 0.22634373579258046,
+        "min_dist_mean": 1.0110022815319346,
+        "energy_mean": 11.06682633390975
+      }
+    ],
+    "rows": 120,
+    "env_realizations": 5,
+    "trajectory_seeds": 8,
+    "paired": {
+      "standard": {
+        "sindy_wins": 6,
+        "baseline_wins": 0,
+        "ties": 34,
+        "delta_pp": 14.999999999999991,
+        "mcnemar_p": 0.03125
+      },
+      "rls": {
+        "sindy_wins": 6,
+        "baseline_wins": 0,
+        "ties": 34,
+        "delta_pp": 14.999999999999991,
+        "mcnemar_p": 0.03125
+      }
+    },
+    "alpha": {
+      "mean": 0.08030335400771164,
+      "std": 0.02429712107289181,
+      "response": -0.01916945453751217
+    },
+    "protocol_note": "Robot-specific secondary validation with disjoint calibration (401-404) and evaluation seeds (501-508)."
+  },
+  "quality_gates": {
+    "main_data_unchanged": true,
+    "main_sindy_ge_85pct": true,
+    "prediction_sindy_beats_both": true,
+    "four_wheel_sindy_noninferior_or_better": true
+  }
+}
